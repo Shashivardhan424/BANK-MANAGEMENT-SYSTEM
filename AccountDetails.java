@@ -32,6 +32,7 @@ public class AccountDetails extends JFrame implements ActionListener {
         setTitle("Account Details");
         setSize(550, 600);
         setLayout(null);
+       
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
