@@ -24,55 +24,88 @@ public class Withdraw extends JFrame implements ActionListener {
         this.accountNo = accountNo;
 
         setTitle("Bank Management System - Withdraw");
-        setSize(500, 400);
-        setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-       
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setLayout(null);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
         titleLabel = new JLabel("WITHDRAW MONEY");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        titleLabel.setBounds(130, 30, 250, 40);
+
+        titleLabel.setBounds(717, 180, 250, 40);
+
         add(titleLabel);
 
+
         // Account Number
+
         accountLabel = new JLabel("Account Number:");
-        accountLabel.setBounds(80, 100, 130, 30);
+
+        accountLabel.setBounds(637, 250, 130, 30);
+
         add(accountLabel);
 
+
         JLabel accountValue = new JLabel(String.valueOf(accountNo));
-        accountValue.setBounds(230, 100, 150, 30);
+
+        accountValue.setBounds(787, 250, 150, 30);
+
         add(accountValue);
 
+
         // Withdrawal Amount
+
         amountLabel = new JLabel("Withdraw Amount:");
-        amountLabel.setBounds(80, 150, 130, 30);
+
+        amountLabel.setBounds(637, 300, 130, 30);
+
         add(amountLabel);
 
+
         amountField = new JTextField();
-        amountField.setBounds(230, 150, 150, 30);
+
+        amountField.setBounds(787, 300, 150, 30);
+
         add(amountField);
 
-       
+
         withdrawButton = new JButton("Withdraw");
-        withdrawButton.setBounds(60, 220, 120, 35);
+
+        withdrawButton.setBounds(627, 370, 120, 35);
+
         withdrawButton.addActionListener(this);
+
         add(withdrawButton);
 
-        
+
         clearButton = new JButton("Clear");
-        clearButton.setBounds(190, 220, 100, 35);
+
+        clearButton.setBounds(757, 370, 100, 35);
+
         clearButton.addActionListener(this);
+
         add(clearButton);
 
+
         backButton = new JButton("Back");
-        backButton.setBounds(300, 220, 100, 35);
+
+        backButton.setBounds(867, 370, 100, 35);
+
         backButton.addActionListener(this);
+
         add(backButton);
 
+
         balanceLabel = new JLabel("Current Balance: Loading...");
-        balanceLabel.setBounds(130, 290, 250, 30);
+
+        balanceLabel.setBounds(707, 430, 250, 30);
+
         add(balanceLabel);
+
 
         loadBalance();
 

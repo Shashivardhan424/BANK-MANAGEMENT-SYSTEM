@@ -23,63 +23,105 @@ public class Login extends JFrame implements ActionListener {
     public Login() {
 
         setTitle("Bank Management System - Login");
-        setSize(500, 400);
+
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         setLayout(null);
-        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+
         titleLabel = new JLabel("BANK MANAGEMENT SYSTEM");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 22));
-        titleLabel.setBounds(90, 30, 350, 40);
+
+        titleLabel.setBounds(640, 250, 350, 40);
+
         add(titleLabel);
 
+
         usernameLabel = new JLabel("Username:");
-        usernameLabel.setBounds(80, 100, 100, 30);
+
+        usernameLabel.setBounds(637, 320, 100, 30);
+
         add(usernameLabel);
 
+
         usernameField = new JTextField();
-        usernameField.setBounds(190, 100, 220, 30);
+
+        usernameField.setBounds(747, 320, 220, 30);
+
         add(usernameField);
 
+
         passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(80, 150, 100, 30);
+
+        passwordLabel.setBounds(637, 370, 100, 30);
+
         add(passwordLabel);
 
+
         passwordField = new JPasswordField();
-        passwordField.setBounds(190, 150, 220, 30);
+
+        passwordField.setBounds(747, 370, 220, 30);
+
         add(passwordField);
 
+
         loginButton = new JButton("Customer Login");
-        loginButton.setBounds(80, 210, 150, 35);
+
+        loginButton.setBounds(637, 430, 150, 35);
+
         loginButton.addActionListener(this);
+
         add(loginButton);
 
+
         adminButton = new JButton("Admin Login");
-        adminButton.setBounds(250, 210, 150, 35);
+
+        adminButton.setBounds(807, 430, 150, 35);
+
         adminButton.addActionListener(e -> {
+
             new AdminLogin();
+
             dispose();
+
         });
+
         add(adminButton);
 
+
         registerButton = new JButton("Register");
-        registerButton.setBounds(80, 260, 100, 35);
+
+        registerButton.setBounds(637, 480, 100, 35);
+
         registerButton.addActionListener(this);
+
         add(registerButton);
 
+
         clearButton = new JButton("Clear");
-        clearButton.setBounds(190, 260, 100, 35);
+
+        clearButton.setBounds(747, 480, 100, 35);
+
         clearButton.addActionListener(this);
+
         add(clearButton);
 
+
         exitButton = new JButton("Exit");
-        exitButton.setBounds(300, 260, 100, 35);
+
+        exitButton.setBounds(857, 480, 100, 35);
+
         exitButton.addActionListener(this);
+
         add(exitButton);
 
-        setVisible(true);
-    }
 
+        setVisible(true);
+
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 

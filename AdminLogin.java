@@ -24,53 +24,82 @@ public class AdminLogin extends JFrame implements ActionListener {
     public AdminLogin() {
 
         setTitle("Bank Management System - Admin Login");
-        setSize(500, 400);
-        setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-     
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setLayout(null);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
         titleLabel = new JLabel("ADMIN LOGIN");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 25));
-        titleLabel.setBounds(165, 40, 200, 40);
+
+        titleLabel.setBounds(742, 220, 200, 40);
+
         add(titleLabel);
 
+
         usernameLabel = new JLabel("Username:");
-        usernameLabel.setBounds(80, 120, 120, 30);
+
+        usernameLabel.setBounds(657, 300, 120, 30);
+
         add(usernameLabel);
 
+
         usernameField = new JTextField();
-        usernameField.setBounds(210, 120, 180, 30);
+
+        usernameField.setBounds(787, 300, 180, 30);
+
         add(usernameField);
 
-        
+
         passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(80, 170, 120, 30);
+
+        passwordLabel.setBounds(657, 350, 120, 30);
+
         add(passwordLabel);
 
+
         passwordField = new JPasswordField();
-        passwordField.setBounds(210, 170, 180, 30);
+
+        passwordField.setBounds(787, 350, 180, 30);
+
         add(passwordField);
 
-        
+
         loginButton = new JButton("Login");
-        loginButton.setBounds(70, 240, 110, 35);
+
+        loginButton.setBounds(647, 420, 110, 35);
+
         loginButton.addActionListener(this);
+
         add(loginButton);
 
+
         // Clear button
+
         clearButton = new JButton("Clear");
-        clearButton.setBounds(195, 240, 110, 35);
+
+        clearButton.setBounds(772, 420, 110, 35);
+
         clearButton.addActionListener(this);
+
         add(clearButton);
 
-    
+
         backButton = new JButton("Back");
-        backButton.setBounds(320, 240, 110, 35);
+
+        backButton.setBounds(897, 420, 110, 35);
+
         backButton.addActionListener(this);
+
         add(backButton);
 
+
         setVisible(true);
+
     }
 
   

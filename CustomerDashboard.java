@@ -24,10 +24,13 @@ public class CustomerDashboard extends JFrame implements ActionListener {
         this.accountNo = accountNo;
 
         setTitle("Customer Dashboard");
-        setSize(600, 500);
+
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         setLayout(null);
-        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         titleLabel = new JLabel("BANK MANAGEMENT SYSTEM");
 
@@ -35,54 +38,82 @@ public class CustomerDashboard extends JFrame implements ActionListener {
                 new Font("Arial", Font.BOLD, 24)
         );
 
-        titleLabel.setBounds(140, 30, 350, 40);
+        titleLabel.setBounds(667, 180, 450, 40);
 
         add(titleLabel);
+
 
         welcomeLabel = new JLabel(
                 "Welcome Customer - Account No: " + accountNo
         );
 
-        welcomeLabel.setBounds(170, 80, 300, 30);
+        welcomeLabel.setBounds(692, 230, 300, 30);
 
         add(welcomeLabel);
 
+
         accountButton = new JButton("Account Details");
-        accountButton.setBounds(80, 140, 190, 40);
+
+        accountButton.setBounds(607, 290, 190, 40);
+
         accountButton.addActionListener(this);
+
         add(accountButton);
 
+
         depositButton = new JButton("Deposit");
-        depositButton.setBounds(310, 140, 190, 40);
+
+        depositButton.setBounds(817, 290, 190, 40);
+
         depositButton.addActionListener(this);
+
         add(depositButton);
 
+
         withdrawButton = new JButton("Withdraw");
-        withdrawButton.setBounds(80, 200, 190, 40);
+
+        withdrawButton.setBounds(607, 350, 190, 40);
+
         withdrawButton.addActionListener(this);
+
         add(withdrawButton);
 
+
         balanceButton = new JButton("Balance");
-        balanceButton.setBounds(310, 200, 190, 40);
+
+        balanceButton.setBounds(817, 350, 190, 40);
+
         balanceButton.addActionListener(this);
+
         add(balanceButton);
 
+
         transactionButton = new JButton("Transaction History");
-        transactionButton.setBounds(80, 260, 420, 40);
+
+        transactionButton.setBounds(607, 410, 400, 40);
+
         transactionButton.addActionListener(e -> {
+
             new TransactionHistory(accountNo);
+
             dispose();
+
         });
+
         add(transactionButton);
 
+
         logoutButton = new JButton("Logout");
-        logoutButton.setBounds(210, 340, 150, 40);
+
+        logoutButton.setBounds(732, 490, 150, 40);
+
         logoutButton.addActionListener(this);
+
         add(logoutButton);
+
 
         setVisible(true);
     }
-
     
     public void actionPerformed(ActionEvent e) {
 

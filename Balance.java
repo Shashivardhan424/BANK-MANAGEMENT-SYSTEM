@@ -24,21 +24,31 @@ public class Balance extends JFrame implements ActionListener {
         this.accountNo = accountNo;
 
         setTitle("Bank Management System - Balance");
-        setSize(500, 400);
-        setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-        
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setLayout(null);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
         titleLabel = new JLabel("ACCOUNT BALANCE");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        titleLabel.setBounds(130, 40, 250, 40);
+
+        titleLabel.setBounds(717, 180, 250, 40);
+
         add(titleLabel);
 
+
         accountLabel = new JLabel("Account Number:");
+
         accountLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-        accountLabel.setBounds(80, 120, 140, 30);
+
+        accountLabel.setBounds(637, 250, 140, 30);
+
         add(accountLabel);
+
 
         JLabel accountValue =
                 new JLabel(String.valueOf(accountNo));
@@ -47,10 +57,11 @@ public class Balance extends JFrame implements ActionListener {
                 new Font("Arial", Font.BOLD, 16)
         );
 
-        accountValue.setBounds(240, 120, 150, 30);
+        accountValue.setBounds(797, 250, 150, 30);
+
         add(accountValue);
 
-       
+
         JLabel balanceText =
                 new JLabel("Current Balance:");
 
@@ -58,8 +69,10 @@ public class Balance extends JFrame implements ActionListener {
                 new Font("Arial", Font.PLAIN, 16)
         );
 
-        balanceText.setBounds(80, 170, 140, 30);
+        balanceText.setBounds(637, 300, 140, 30);
+
         add(balanceText);
+
 
         balanceLabel =
                 new JLabel("Loading...");
@@ -68,22 +81,29 @@ public class Balance extends JFrame implements ActionListener {
                 new Font("Arial", Font.BOLD, 18)
         );
 
-        balanceLabel.setBounds(240, 170, 180, 30);
+        balanceLabel.setBounds(797, 300, 180, 30);
+
         add(balanceLabel);
 
-     
+
         refreshButton = new JButton("Refresh");
-        refreshButton.setBounds(100, 250, 120, 35);
+
+        refreshButton.setBounds(657, 380, 120, 35);
+
         refreshButton.addActionListener(this);
+
         add(refreshButton);
 
-        
+
         backButton = new JButton("Back");
-        backButton.setBounds(260, 250, 120, 35);
+
+        backButton.setBounds(817, 380, 120, 35);
+
         backButton.addActionListener(this);
+
         add(backButton);
 
-       
+
         loadBalance();
 
         setVisible(true);

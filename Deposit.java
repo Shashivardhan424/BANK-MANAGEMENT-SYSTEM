@@ -21,57 +21,84 @@ public class Deposit extends JFrame implements ActionListener {
         this.accountNo = accountNo;
 
         setTitle("Bank Management System - Deposit");
-        setSize(500, 400);
-        setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
 
-        
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setLayout(null);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
         titleLabel = new JLabel("DEPOSIT MONEY");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
-        titleLabel.setBounds(140, 30, 250, 40);
+
+        titleLabel.setBounds(717, 180, 250, 40);
+
         add(titleLabel);
 
-        
+
         accountLabel = new JLabel("Account Number:");
-        accountLabel.setBounds(80, 100, 130, 30);
+
+        accountLabel.setBounds(637, 250, 130, 30);
+
         add(accountLabel);
 
+
         JLabel accountValue = new JLabel(String.valueOf(accountNo));
-        accountValue.setBounds(230, 100, 150, 30);
+
+        accountValue.setBounds(787, 250, 150, 30);
+
         add(accountValue);
 
-      
+
         amountLabel = new JLabel("Deposit Amount:");
-        amountLabel.setBounds(80, 150, 130, 30);
+
+        amountLabel.setBounds(637, 300, 130, 30);
+
         add(amountLabel);
 
+
         amountField = new JTextField();
-        amountField.setBounds(230, 150, 150, 30);
+
+        amountField.setBounds(787, 300, 150, 30);
+
         add(amountField);
 
-       
+
         depositButton = new JButton("Deposit");
-        depositButton.setBounds(80, 220, 100, 35);
+
+        depositButton.setBounds(627, 370, 100, 35);
+
         depositButton.addActionListener(this);
+
         add(depositButton);
 
-  
+
         clearButton = new JButton("Clear");
-        clearButton.setBounds(190, 220, 100, 35);
+
+        clearButton.setBounds(737, 370, 100, 35);
+
         clearButton.addActionListener(this);
+
         add(clearButton);
 
-       
+
         backButton = new JButton("Back");
-        backButton.setBounds(300, 220, 100, 35);
+
+        backButton.setBounds(847, 370, 100, 35);
+
         backButton.addActionListener(this);
+
         add(backButton);
 
-    
+
         balanceLabel = new JLabel("Current Balance: Loading...");
-        balanceLabel.setBounds(130, 290, 250, 30);
+
+        balanceLabel.setBounds(707, 430, 250, 30);
+
         add(balanceLabel);
+
 
         loadBalance();
 

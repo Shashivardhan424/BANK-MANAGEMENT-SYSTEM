@@ -16,35 +16,54 @@ public class AdminDashboard extends JFrame implements ActionListener {
     public AdminDashboard() {
 
         setTitle("Bank Management System - Admin Dashboard");
-        setSize(600, 450);
+
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         setLayout(null);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
+
 
         welcomeLabel = new JLabel("Welcome Admin");
+
         welcomeLabel.setFont(new Font("Arial", Font.BOLD, 20));
-        welcomeLabel.setBounds(220, 90, 200, 35);
+
+        welcomeLabel.setBounds(742, 220, 200, 35);
+
         add(welcomeLabel);
 
-        
+
         customerButton = new JButton("Customer Management");
-        customerButton.setBounds(170, 150, 250, 45);
+
+        customerButton.setBounds(717, 280, 250, 45);
+
         customerButton.addActionListener(this);
+
         add(customerButton);
 
+
         // Transaction Management
+
         transactionButton = new JButton("Transaction Management");
-        transactionButton.setBounds(170, 215, 250, 45);
+
+        transactionButton.setBounds(717, 345, 250, 45);
+
         transactionButton.addActionListener(this);
+
         add(transactionButton);
 
-        
+
         logoutButton = new JButton("Logout");
-        logoutButton.setBounds(220, 290, 150, 40);
+
+        logoutButton.setBounds(767, 420, 150, 40);
+
         logoutButton.addActionListener(this);
+
         add(logoutButton);
 
+
         setVisible(true);
+
     }
 
     @Override

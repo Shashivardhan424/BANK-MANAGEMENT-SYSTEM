@@ -36,155 +36,246 @@ public class Register extends JFrame implements ActionListener {
     public Register() {
 
         setTitle("Bank Management System - Registration");
-        setSize(600, 700);
+
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+
         setLayout(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
         titleLabel = new JLabel("CREATE BANK ACCOUNT");
+
         titleLabel.setFont(new Font("Arial", Font.BOLD, 22));
-        titleLabel.setBounds(170, 20, 300, 40);
+
+        titleLabel.setBounds(692, 130, 300, 40);
+
         add(titleLabel);
 
+
         nameLabel = new JLabel("Name:");
-        nameLabel.setBounds(70, 80, 150, 30);
+
+        nameLabel.setBounds(612, 190, 150, 30);
+
         add(nameLabel);
 
         nameField = new JTextField();
-        nameField.setBounds(230, 80, 280, 30);
+
+        nameField.setBounds(772, 190, 280, 30);
+
         add(nameField);
 
+
         ageLabel = new JLabel("Age:");
-        ageLabel.setBounds(70, 120, 150, 30);
+
+        ageLabel.setBounds(612, 230, 150, 30);
+
         add(ageLabel);
 
         ageField = new JTextField();
-        ageField.setBounds(230, 120, 280, 30);
+
+        ageField.setBounds(772, 230, 280, 30);
+
         add(ageField);
 
+
         genderLabel = new JLabel("Gender:");
-        genderLabel.setBounds(70, 160, 150, 30);
+
+        genderLabel.setBounds(612, 270, 150, 30);
+
         add(genderLabel);
 
+
         maleButton = new JRadioButton("Male");
-        maleButton.setBounds(230, 160, 80, 30);
+
+        maleButton.setBounds(772, 270, 80, 30);
 
         femaleButton = new JRadioButton("Female");
-        femaleButton.setBounds(310, 160, 90, 30);
+
+        femaleButton.setBounds(852, 270, 90, 30);
 
         otherButton = new JRadioButton("Other");
-        otherButton.setBounds(400, 160, 80, 30);
-        
-        
+
+        otherButton.setBounds(942, 270, 80, 30);
+
 
         add(maleButton);
+
         add(femaleButton);
+
         add(otherButton);
-        
+
+
         maleButton.addActionListener(e -> {
+
             femaleButton.setSelected(false);
+
             otherButton.setSelected(false);
+
         });
 
 
-   
         femaleButton.addActionListener(e -> {
+
             maleButton.setSelected(false);
+
             otherButton.setSelected(false);
+
         });
 
 
-    
         otherButton.addActionListener(e -> {
+
             maleButton.setSelected(false);
+
             femaleButton.setSelected(false);
+
         });
+
 
         phoneLabel = new JLabel("Phone:");
-        phoneLabel.setBounds(70, 200, 150, 30);
+
+        phoneLabel.setBounds(612, 310, 150, 30);
+
         add(phoneLabel);
 
         phoneField = new JTextField();
-        phoneField.setBounds(230, 200, 280, 30);
+
+        phoneField.setBounds(772, 310, 280, 30);
+
         add(phoneField);
 
+
         emailLabel = new JLabel("Email:");
-        emailLabel.setBounds(70, 240, 150, 30);
+
+        emailLabel.setBounds(612, 350, 150, 30);
+
         add(emailLabel);
 
         emailField = new JTextField();
-        emailField.setBounds(230, 240, 280, 30);
+
+        emailField.setBounds(772, 350, 280, 30);
+
         add(emailField);
 
+
         addressLabel = new JLabel("Address:");
-        addressLabel.setBounds(70, 280, 150, 30);
+
+        addressLabel.setBounds(612, 390, 150, 30);
+
         add(addressLabel);
 
         addressField = new JTextField();
-        addressField.setBounds(230, 280, 280, 30);
+
+        addressField.setBounds(772, 390, 280, 30);
+
         add(addressField);
 
+
         accountTypeLabel = new JLabel("Account Type:");
-        accountTypeLabel.setBounds(70, 320, 150, 30);
+
+        accountTypeLabel.setBounds(612, 430, 150, 30);
+
         add(accountTypeLabel);
 
+
         String[] accountTypes = {
-                "Savings",
-                "Current"
+
+            "Savings",
+
+            "Current"
+
         };
 
+
         accountTypeBox = new JComboBox<>(accountTypes);
-        accountTypeBox.setBounds(230, 320, 280, 30);
+
+        accountTypeBox.setBounds(772, 430, 280, 30);
+
         add(accountTypeBox);
 
+
         depositLabel = new JLabel("Initial Deposit:");
-        depositLabel.setBounds(70, 360, 150, 30);
+
+        depositLabel.setBounds(612, 470, 150, 30);
+
         add(depositLabel);
 
         depositField = new JTextField();
-        depositField.setBounds(230, 360, 280, 30);
+
+        depositField.setBounds(772, 470, 280, 30);
+
         add(depositField);
 
+
         usernameLabel = new JLabel("Username:");
-        usernameLabel.setBounds(70, 400, 150, 30);
+
+        usernameLabel.setBounds(612, 510, 150, 30);
+
         add(usernameLabel);
 
         usernameField = new JTextField();
-        usernameField.setBounds(230, 400, 280, 30);
+
+        usernameField.setBounds(772, 510, 280, 30);
+
         add(usernameField);
 
+
         passwordLabel = new JLabel("Password:");
-        passwordLabel.setBounds(70, 440, 150, 30);
+
+        passwordLabel.setBounds(612, 550, 150, 30);
+
         add(passwordLabel);
 
         passwordField = new JPasswordField();
-        passwordField.setBounds(230, 440, 280, 30);
+
+        passwordField.setBounds(772, 550, 280, 30);
+
         add(passwordField);
 
+
         confirmPasswordLabel = new JLabel("Confirm Password:");
-        confirmPasswordLabel.setBounds(70, 480, 150, 30);
+
+        confirmPasswordLabel.setBounds(612, 590, 150, 30);
+
         add(confirmPasswordLabel);
 
         confirmPasswordField = new JPasswordField();
-        confirmPasswordField.setBounds(230, 480, 280, 30);
+
+        confirmPasswordField.setBounds(772, 590, 280, 30);
+
         add(confirmPasswordField);
 
+
         createButton = new JButton("Create Account");
-        createButton.setBounds(100, 540, 150, 35);
+
+        createButton.setBounds(642, 650, 150, 35);
+
         createButton.addActionListener(this);
+
         add(createButton);
 
+
         clearButton = new JButton("Clear");
-        clearButton.setBounds(270, 540, 100, 35);
+
+        clearButton.setBounds(812, 650, 100, 35);
+
         clearButton.addActionListener(this);
+
         add(clearButton);
 
+
         backButton = new JButton("Back");
-        backButton.setBounds(390, 540, 100, 35);
+
+        backButton.setBounds(932, 650, 100, 35);
+
         backButton.addActionListener(this);
-       add(backButton);   
-        
- 
+
+        add(backButton);
+
+
         setVisible(true);
+
     }
 
     public void actionPerformed(ActionEvent e) {
